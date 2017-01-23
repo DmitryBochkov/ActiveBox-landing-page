@@ -1,0 +1,44 @@
+.main-nav .container {
+  padding: 0;
+}
+.main-nav .row {
+  padding: 15px 0;
+  min-height: 95px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+.main-nav .navbar-brand {
+  padding: 0;
+  margin-top: 15px;
+  width: 189px;
+  height: 24px;
+}
+.main-nav__menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0;
+  font-weight: 700;
+}
+.main-nav__item {
+  display: inline-block;
+  margin-right: 30px;
+  font-size: 13px;
+  opacity: 0.75;
+  text-transform: uppercase;
+}
+.main-nav__item:last-child {
+  margin-right: -15px;
+}
+.main-nav__link {
+  display: block;
+  padding: 15px;
+  color: $header-text-color;
+  text-decoration: none;
+  opacity: inherit;
+}
+.main-nav__link:hover,
+.main-nav__link:focus {
+  color: inherit;
+  opacity: 1;
+  text-decoration: none;
+}
