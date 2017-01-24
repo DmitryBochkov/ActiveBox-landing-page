@@ -1,44 +1,105 @@
-.main-nav .container {
+.main-nav {
+  min-height: 60px;
+  background-color: $main-header-color;
+}
+.main-nav #top-menu {
   padding: 0;
 }
-.main-nav .row {
-  padding: 15px 0;
-  min-height: 95px;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);
+.main-nav__btn {
+  width: 40px;
+  height: 40px;
+  background: $primary-decor-color;
+  border-radius: 50%;
+  padding: 5px;
 }
-.main-nav .navbar-brand {
-  padding: 0;
-  margin-top: 15px;
-  width: 189px;
-  height: 24px;
+.main-nav__btn .icon-bar {
+  background-color: #fff;
+  margin: 0 auto;
+  width: 20px;
+}
+.main-nav__btn:hover .icon-bar {
+  width: 22px;
+}
+.main-nav__btn:active .icon-bar {
+  width: 18px;
 }
 .main-nav__menu {
+  position: fixed;
   margin: 0;
   padding: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: $main-header-color;
   list-style: none;
-  font-size: 0;
   font-weight: 700;
+  text-align: center;
 }
 .main-nav__item {
-  display: inline-block;
-  margin-right: 30px;
   font-size: 13px;
-  opacity: 0.75;
   text-transform: uppercase;
-}
-.main-nav__item:last-child {
-  margin-right: -15px;
 }
 .main-nav__link {
   display: block;
   padding: 15px;
-  color: $header-text-color;
+  opacity: 0.75;
+  color: $secondary-text-color;
   text-decoration: none;
-  opacity: inherit;
 }
-.main-nav__link:hover,
 .main-nav__link:focus {
   color: inherit;
   opacity: 1;
   text-decoration: none;
+}
+.main-nav__link:hover {
+  color: $main-header-color;
+  background: $secondary-text-color;
+  opacity: 1;
+  text-decoration: none;
+}
+
+@media (min-width: $screen-sm-min) {
+  .main-nav {
+    background-color: transparent;
+  }
+  .main-nav .row {
+    padding: 15px 0;
+    min-height: 80px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);
+  }
+  .main-nav .navbar-right {
+    margin-right: 0;
+  }
+  .main-nav__menu {
+    position: initial;
+    font-size: 0;
+    background-color: transparent;
+  }
+  .main-nav__item {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .main-nav__link:hover {
+    color: $secondary-text-color;
+    background: transparent;
+  }
+}
+@media (min-width: $screen-md-min) {
+  .main-nav .row {
+    min-height: 95px;
+  }
+  .main-nav .navbar-brand {
+    padding: 0;
+    margin-top: 15px;
+    width: 189px;
+    height: 24px;
+  }
+  .main-nav__menu {
+    overflow: hidden;
+  }
+  .main-nav__item {
+    margin-right: 30px;
+  }
+  .main-nav__item:last-child {
+    margin-right: -15px;
+  }
 }

@@ -1,0 +1,29 @@
+.team__card {
+  padding-bottom: 35px;
+}
+.team__card-image {
+  display: block;
+  width: 270px;
+  margin: 0 auto;
+}
+.team__card-name {
+  margin-top: 25px;
+  color: $body-title-color;
+  font-size: 22px;
+}
+.team__card-position {
+  display: block;
+  margin-bottom: 25px;
+  color: $primary-decor-color;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.team__card-descr {
+  margin-bottom: 25px;
+}
+@media  (min-width: $screen-md-min) {
+  .team__card-image {
+    width: 100%;
+    height: auto;
+  }
+}

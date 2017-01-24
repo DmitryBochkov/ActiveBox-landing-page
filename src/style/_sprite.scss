@@ -1,0 +1,145 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$clean-code-icon-name: 'clean-code-icon';
+$clean-code-icon-x: 162px;
+$clean-code-icon-y: 0px;
+$clean-code-icon-offset-x: -162px;
+$clean-code-icon-offset-y: 0px;
+$clean-code-icon-width: 56px;
+$clean-code-icon-height: 60px;
+$clean-code-icon-total-width: 218px;
+$clean-code-icon-total-height: 125px;
+$clean-code-icon-image: '../img/sprite.png';
+$clean-code-icon: (162px, 0px, -162px, 0px, 56px, 60px, 218px, 125px, '../img/sprite.png', 'clean-code-icon', );
+$download-for-free-icon-name: 'download-for-free-icon';
+$download-for-free-icon-x: 0px;
+$download-for-free-icon-y: 0px;
+$download-for-free-icon-offset-x: 0px;
+$download-for-free-icon-offset-y: 0px;
+$download-for-free-icon-width: 79px;
+$download-for-free-icon-height: 60px;
+$download-for-free-icon-total-width: 218px;
+$download-for-free-icon-total-height: 125px;
+$download-for-free-icon-image: '../img/sprite.png';
+$download-for-free-icon: (0px, 0px, 0px, 0px, 79px, 60px, 218px, 125px, '../img/sprite.png', 'download-for-free-icon', );
+$easily-customised-icon-name: 'easily-customised-icon';
+$easily-customised-icon-x: 77px;
+$easily-customised-icon-y: 65px;
+$easily-customised-icon-offset-x: -77px;
+$easily-customised-icon-offset-y: -65px;
+$easily-customised-icon-width: 60px;
+$easily-customised-icon-height: 60px;
+$easily-customised-icon-total-width: 218px;
+$easily-customised-icon-total-height: 125px;
+$easily-customised-icon-image: '../img/sprite.png';
+$easily-customised-icon: (77px, 65px, -77px, -65px, 60px, 60px, 218px, 125px, '../img/sprite.png', 'easily-customised-icon', );
+$modern-design-icon-name: 'modern-design-icon';
+$modern-design-icon-x: 162px;
+$modern-design-icon-y: 65px;
+$modern-design-icon-offset-x: -162px;
+$modern-design-icon-offset-y: -65px;
+$modern-design-icon-width: 41px;
+$modern-design-icon-height: 60px;
+$modern-design-icon-total-width: 218px;
+$modern-design-icon-total-height: 125px;
+$modern-design-icon-image: '../img/sprite.png';
+$modern-design-icon: (162px, 65px, -162px, -65px, 41px, 60px, 218px, 125px, '../img/sprite.png', 'modern-design-icon', );
+$ready-to-ship-icon-name: 'ready-to-ship-icon';
+$ready-to-ship-icon-x: 0px;
+$ready-to-ship-icon-y: 65px;
+$ready-to-ship-icon-offset-x: 0px;
+$ready-to-ship-icon-offset-y: -65px;
+$ready-to-ship-icon-width: 72px;
+$ready-to-ship-icon-height: 60px;
+$ready-to-ship-icon-total-width: 218px;
+$ready-to-ship-icon-total-height: 125px;
+$ready-to-ship-icon-image: '../img/sprite.png';
+$ready-to-ship-icon: (0px, 65px, 0px, -65px, 72px, 60px, 218px, 125px, '../img/sprite.png', 'ready-to-ship-icon', );
+$responsive-ready-icon-name: 'responsive-ready-icon';
+$responsive-ready-icon-x: 84px;
+$responsive-ready-icon-y: 0px;
+$responsive-ready-icon-offset-x: -84px;
+$responsive-ready-icon-offset-y: 0px;
+$responsive-ready-icon-width: 73px;
+$responsive-ready-icon-height: 60px;
+$responsive-ready-icon-total-width: 218px;
+$responsive-ready-icon-total-height: 125px;
+$responsive-ready-icon-image: '../img/sprite.png';
+$responsive-ready-icon: (84px, 0px, -84px, 0px, 73px, 60px, 218px, 125px, '../img/sprite.png', 'responsive-ready-icon', );
+$spritesheet-width: 218px;
+$spritesheet-height: 125px;
+$spritesheet-image: '../img/sprite.png';
+$spritesheet-sprites: ($clean-code-icon, $download-for-free-icon, $easily-customised-icon, $modern-design-icon, $ready-to-ship-icon, $responsive-ready-icon, );
+$spritesheet: (218px, 125px, '../img/sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

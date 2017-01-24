@@ -57,7 +57,16 @@
 @import "style-variables";
 @import "style-scaffolding";
 
+// sprite
+@import "_sprite";
+
 // Custom component styles
 @import "blocks/main-header";
 @import "blocks/main-nav";
 @import "blocks/btns";
+@import "blocks/features";
+@import "blocks/features-card";
+@import "blocks/projects__card";
+@import "blocks/team";
+@import "blocks/team-card";
+@import "blocks/social-btns";

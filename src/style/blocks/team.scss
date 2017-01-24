@@ -1,0 +1,13 @@
+.team {
+  padding: 30px 0;
+}
+@media (min-width: $screen-sm-min) {
+  .team {
+    padding: 60px 0;
+  }
+}
+@media (min-width: $screen-md-min) {
+  .team {
+    padding: 100px 0;
+  }
+}

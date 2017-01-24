@@ -1,0 +1,35 @@
+.social-btns {
+  display: flex;
+}
+.social-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  .fb-icon {
+    width: 8px;
+    height: 18px;
+  }
+  .twitter-icon {
+    width: 20px;
+    height: 13.81px;
+  }
+  .linkedin-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+.social-btn--team {
+  border: 1px solid #e8ecee;
+  margin-right: 5px;
+}
+.social-btn--team:hover {
+  border: 1px solid #c6cacc;
+  svg .cls-1 {
+    fill: $body-text-color;
+  }
+}
+.social-btn--team:active {
+  opacity: 0.7;
+}

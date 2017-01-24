@@ -1,0 +1,45 @@
+.features__card {
+  position: relative;
+  padding-top: 95px;
+  margin-bottom: 20px;
+  min-height: 250px;
+  text-align: center;
+}
+.features__card::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 50%;
+}
+.features__card:first-child::before {
+  @include sprite($easily-customised-icon);
+  margin-left: -30px;
+}
+.features__card:nth-child(2)::before {
+  @include sprite($responsive-ready-icon);
+  margin-left: -36px;
+}
+.features__card:nth-child(3)::before {
+  @include sprite($modern-design-icon);
+  margin-left: -20px;
+}
+.features__card:nth-child(4)::before {
+  @include sprite($clean-code-icon);
+  margin-left: -28px;
+}
+.features__card:nth-child(5)::before {
+  @include sprite($ready-to-ship-icon);
+  margin-left: -36px;
+}
+.features__card:nth-child(6)::before {
+  @include sprite($download-for-free-icon);
+  margin-left: -39px;
+}
+.features__card-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $body-title-color;
+}
+.features__card-content {
+  padding: 0 20px;
+}

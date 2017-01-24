@@ -6,7 +6,16 @@
   font-weight: 600;
   line-height: 21px;
   text-transform: uppercase;
-  color: $header-text-color;
-  background-color: #e84545;
+  color: $secondary-text-color;
+  background-color: $primary-decor-color;
   border-radius: 2px;
+}
+.btn--main-header:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+.btn--main-header:active {
+  color: rgba(255, 255, 255, 1);
+}
+.btn--main-header:focus {
+  color: rgba(255, 255, 255, 1);
 }
