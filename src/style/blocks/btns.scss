@@ -19,3 +19,14 @@
 .btn--main-header:focus {
   color: rgba(255, 255, 255, 1);
 }
+
+.btn--download {
+  @extend .btn--main-header;
+  width: 240px;
+}
+
+@media (min-width: $screen-sm-min) {
+  .btn--download {
+    width: 280px;
+  }
+}

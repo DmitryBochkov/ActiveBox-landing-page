@@ -83,8 +83,10 @@
     background: transparent;
   }
 }
+
 @media (min-width: $screen-md-min) {
   .main-nav .row {
+    padding: 20px 0;
     min-height: 95px;
   }
   .main-nav .navbar-brand {

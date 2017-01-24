@@ -13,7 +13,7 @@
 }
 .team__card-position {
   display: block;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   color: $primary-decor-color;
   font-size: 13px;
   text-transform: uppercase;
@@ -22,8 +22,8 @@
   margin-bottom: 25px;
 }
 @media  (min-width: $screen-md-min) {
-  .team__card-image {
-    width: 100%;
-    height: auto;
-  }
+  // .team__card-image {
+  //   width: 100%;
+  //   height: auto;
+  // }
 }

@@ -1,0 +1,15 @@
+.main-footer {
+  color: $footer-text-color;
+  padding: 30px 0 20px;
+  background: $main-footer-color;
+}
+@media (min-width: $screen-sm-min) {
+  .main-footer {
+    padding: 50px 0 37px;
+  }
+}
+@media (min-width: $screen-md-min) {
+  .main-footer {
+    padding-top: 60px;
+  }
+}

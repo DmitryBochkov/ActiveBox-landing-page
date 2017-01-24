@@ -1,6 +1,6 @@
 .main-header {
   min-height: 680px;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   width: 100%;
   background: $main-header-color url(../img/header-bg.jpg);
   background-size: cover;
@@ -11,7 +11,7 @@
   text-align: center;
 }
 .main-header__title h1 {
-  margin-bottom: 30px;
+  margin-bottom: 23px;
   font-family: $font-family-header-title;
   font-size: 50px;
   font-weight: 700;
@@ -29,14 +29,13 @@
     min-height: 710px;
   }
   .main-header__title {
-    margin-top: 140px;
+    margin-top: 123px;
   }
   .main-header__title h1 {
     font-size: 65px;
   }
   .main-header__title p {
-    padding: 0 70px;
-    margin-bottom: 70px;
+    margin-bottom: 75px;
     font-size: 22px;
   }
 }

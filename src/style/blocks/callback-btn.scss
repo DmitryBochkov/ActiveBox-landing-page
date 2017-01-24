@@ -1,0 +1,31 @@
+.callback-btn {
+  position: fixed;
+  z-index: 200;
+  bottom: 30px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  background: $primary-decor-color;
+  .glyphicon-earphone {
+    color: $secondary-text-color;
+  }
+}
+.callback-btn:hover .glyphicon-earphone {
+  color: $primary-decor-color;
+}
+.callback-btn:hover {
+  border: 2px solid $primary-decor-color;
+  background: #fff;
+}
+.callback-btn:active {
+  border: 1px solid $primary-decor-color;
+}
+
+@media (min-width: $screen-md-min) {
+  .callback-btn {
+    right: 30px;
+  }
+}

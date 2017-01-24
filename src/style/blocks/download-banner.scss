@@ -1,0 +1,25 @@
+.download {
+  padding-top: 10px;
+  margin-bottom: 100px;
+}
+.download__banner {
+  text-align: center;
+}
+.download__banner-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.download__banner-subtitle {
+  margin-bottom: 25px;
+  font-size: $font-size-base;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+@media (min-width: $screen-sm-min) {
+  .download__banner-title {
+    font-size: 30px;
+  }
+  .download__banner-subtitle {
+    margin-bottom: 37px;
+  }
+}

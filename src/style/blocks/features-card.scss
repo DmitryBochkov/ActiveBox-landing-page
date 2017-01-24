@@ -1,6 +1,6 @@
 .features__card {
   position: relative;
-  padding-top: 95px;
+  padding-top: 92px;
   margin-bottom: 20px;
   min-height: 250px;
   text-align: center;
@@ -36,10 +36,18 @@
   margin-left: -39px;
 }
 .features__card-title {
+  margin-bottom: 20px;
+  font-size: $font-size-base;
   font-weight: 700;
   text-transform: uppercase;
   color: $body-title-color;
 }
 .features__card-content {
   padding: 0 20px;
+}
+
+@media (min-width: $screen-sm-min) {
+  .features__card {
+    margin-bottom: 10px;
+  }
 }
